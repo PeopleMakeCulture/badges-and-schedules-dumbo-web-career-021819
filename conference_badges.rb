@@ -15,7 +15,7 @@ end
 # optimized
 def batch_badge_creator(names)
   names.map {|n| badge_maker(n)}
-end 
+end
 
 def assign_rooms(names)
   rooms = []
