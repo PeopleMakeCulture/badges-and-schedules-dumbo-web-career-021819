@@ -30,7 +30,7 @@ end
 #optimized
 #array.collect is the same as array.map
 def assign_rooms(names)
-  names.each_with_index {|name, i| "Hello, #{name}! You'll be assigned to room #{i+1}!"}
+  names.each_with_index.map {|name, i| "Hello, #{name}! You'll be assigned to room #{i+1}!"}
 end
 
 def printer(names)
