@@ -12,17 +12,25 @@ def batch_badge_creator1(names)
   return badges
 end
 
-# optimized
+#optimized
+#array.map returns new array with block applied to every element
 def batch_badge_creator(names)
   names.map {|n| badge_maker(n)}
 end
 
-def assign_rooms(names)
+#original
+def assign_rooms1(names)
   rooms = []
   names.each_with_index do |name, i|
     rooms.push("Hello, #{name}! You'll be assigned to room #{i+1}!")
   end
   rooms
+end
+
+#optimized
+#array.collect is the same as array.map
+def assign_rooms(names)
+  names.each_with_index {|name, i| "Hello, #{name}! You'll be assigned to room #{i+1}!"}
 end
 
 def printer(names)
